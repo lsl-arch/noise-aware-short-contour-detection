@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+data/BSDS500/
+data/BSR_bsds500*
+models/*.pth
+models/*.yml
+models/*.yml.gz
+models_ascii/*.yml.gz
+results/reproduction_*/
+results/*/predictions/
+outputs/
+.vscode/settings.json

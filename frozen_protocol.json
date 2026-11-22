@@ -1,0 +1,130 @@
+{
+  "frozen_at": "2026-11-05T12:04:33.268448+08:00",
+  "title": "Noise calibration and local/cross-scale component support",
+  "internal_methods": {
+    "B": {
+      "short": false,
+      "score": 3.75
+    },
+    "global_candidate": {
+      "score": 3.75,
+      "global": 0.8
+    },
+    "no_direction": {
+      "score": 3.75
+    },
+    "ours": {
+      "score": 3.75,
+      "local": 0.85,
+      "cross": 0.5,
+      "gate_long": true,
+      "coarse_high": 2.5
+    },
+    "no_local": {
+      "score": 3.75,
+      "local": 0,
+      "cross": 0.5,
+      "gate_long": true,
+      "coarse_high": 2.5
+    },
+    "no_cross": {
+      "score": 3.75,
+      "local": 0.85,
+      "cross": 0,
+      "gate_long": true,
+      "coarse_high": 2.5
+    },
+    "no_noise": {
+      "score": 3.75,
+      "local": 0.85,
+      "cross": 0.5,
+      "gate_long": true,
+      "coarse_high": 2.5,
+      "alpha": 0
+    }
+  },
+  "baseline_thresholds": {
+    "Canny": 40,
+    "CLAHE_Canny": 120,
+    "StructuredForests": 0.08,
+    "DexiNed": 0.01
+  },
+  "source_sha256": {
+    "method.py": "e90e3631ca38d7c3fa8c88c776cc4888963e0792964de52847d4aa79a6f48125",
+    "baselines.py": "3cdd1d22b3bd46fe361ed037d822e5f15670748314f55a27c6488f5121414916",
+    "run_final.py": "081868b7b894f77113a0eb0e77e14392ba2e6a8a5feb800e3407f28c0d3e2835",
+    "models/dexined_model.py": "d417d0db386205ede64267ae438f9bcb38f84f3832bced1d41bd2e011c5fab53",
+    "vendor/reproduce.py": "432381ba6bae0cfc126b7113adc1c93e3236da99294f2edeaa16d52819835a5d",
+    "vendor/环境自检.py": "882377e83df1c94d38ca4a5b32d220d76a6de6e0e7165486fc3fd375c0b38391",
+    "vendor/运行.py": "ac00406f314c4f46bc385db1e6cbc100f5ec94f7efbbc5b4bfbfe4dc6fdd18be",
+    "vendor/原版复现/lab/edge_lab/__init__.py": "c08473e5a1d7c132f310984c2a1f1cd6aff5042c0332d94d1fab9cd512ca4b07",
+    "vendor/原版复现/lab/edge_lab/core.py": "58c5b03568b2a198ed7bdf2442f91aac5457cc61f434e86c6b03e567839856ea",
+    "vendor/原版复现/lab/edge_lab/experiments.py": "77436c1c041443ff14636836aea6dc2f9849348f1d9234f878ebdb21bbd7814d",
+    "vendor/原版复现/lab/edge_lab/io_utils.py": "972a082d71981972343d78ade74d9c374995d847da428a0e3d28e522edddb763",
+    "vendor/scripts/optimization_bank.py": "a6651d7a023f4c6090169723671289b1416b22f10e2cd054ed9c9348157b78ad",
+    "vendor/scripts/bsds_support.py": "3b7dd36397c45c57db95b47756dc4ea65b948dc453f72f2bfaf31d74bc9c2761",
+    "vendor/scripts/robust_bank.py": "6f8e1a16609f332e54a7be4396204b6ab90e12f132e271a7854c608926d00de3",
+    "vendor/scripts/data_v7.py": "bc8c0e291c3714426dea891586fc75cac393b2f309b83754c21b311015126f5d",
+    "vendor/scripts/refined_bank.py": "2d042969121e1a57102ccc62c4142ea5e8e5c2cb0e8d2c8c67ec266137b8a368",
+    "vendor/scripts/data_v6.py": "33374d55acabb5cbe5358e689b846b05ccb83828813cb7e4da13e29a01fbf11c",
+    "vendor/scripts/spatial_methods.py": "5ef219bb9b8756378d77a1259c8f8b0dfc7c35afb35fecdfc447895d30200dc4",
+    "vendor/scripts/component_match_probe.py": "b175525c8ab528cc40470c0210eadaa21deaf1c79f8ff49acfe90bfeef331b59"
+  },
+  "model_sha256": {
+    "dexined_model.py": "d417d0db386205ede64267ae438f9bcb38f84f3832bced1d41bd2e011c5fab53",
+    "dexined.pth": "bd4c603ef71113b447bffb72a73b9a54ca890e78f4bc8f34cb73f1efb2681e74",
+    "structured_forest.yml.gz": "fe3586bca5ec124b73fa769c2b54e195e4526d6ceeddf161fad96bf68a65bf17"
+  },
+  "selection": {
+    "selected": {
+      "score": 3.75,
+      "local": 0.85,
+      "cross": 0.5,
+      "gate_long": true,
+      "coarse_high": 2.5
+    },
+    "development_rounds": 4,
+    "original_selection_rule": "natural >= B-0.005, null<=20, maximize synthetic F1+0.2short recall",
+    "final_development_revision": "Before final data rendering, require natural F1>=B (rather than B-0.005); maximize same synthetic objective among eligible candidates. This prefers balanced positive natural+synthetic changes; all grids retained.",
+    "final_data_seen_during_selection": false,
+    "development_data": "previously seen v7 192+192 and BSDS val20",
+    "observed_dev": {
+      "B": {
+        "synth_f1": 0.34034048852701704,
+        "short_recall": 0.17156439066551427,
+        "null": 15,
+        "natural_f1": 0.3904498114389979
+      },
+      "ours": {
+        "synth_f1": 0.3563322425677087,
+        "short_recall": 0.24632670700086431,
+        "null": 20,
+        "natural_f1": 0.39437624301596064
+      }
+    }
+  },
+  "data": {
+    "new_seed_synthetic": 384,
+    "new_seed_null": 384,
+    "natural": "BSDS official test200, factor .25 and .10; historical project has viewed test results, treated as frozen benchmark re-evaluation, NOT unseen-scene validation",
+    "synthetic_role": "fresh random seeds, same geometry/noise families as development; not OOD",
+    "real_lowlight_capture": false
+  },
+  "evaluation": {
+    "tolerance_px": 2,
+    "exclude_border": 13,
+    "matching": "one-to-one maximum cardinality/minimum distance",
+    "natural_aggregation": "mean over annotations then macro mean over images",
+    "synthetic_aggregation": "micro counts",
+    "short_gt": "GT full-image 8-components <=32 pixels",
+    "official_bsds_ods": false
+  },
+  "external_inputs": "same grayscale observation clipped to [0,1], replicated 3 channels; Canny uint8+Gaussian sigma1, CLAHE clip2 grid8; SF float gray RGB; DexiNed BGR mean subtraction, 512x512 resize, fused sigmoid, per-image minmax to [0,1], resize back, SF NMS r2 for SF and DexiNed. Frozen threshold selected on val20 macroF1.",
+  "sources": {
+    "sf": "https://github.com/opencv/opencv_extra/blob/4.x/testdata/cv/ximgproc/model.yml.gz",
+    "dexined": "https://github.com/xavysp/DexiNed",
+    "dexined_checkpoint": "https://drive.google.com/file/d/1V56vGTsu7GYiQouCIKvTWl5UKCZ6yCNu/view",
+    "dexined_training": "BIPED per author README",
+    "sf_training": "pretrained OpenCV model; exact training split not verified"
+  }
+}

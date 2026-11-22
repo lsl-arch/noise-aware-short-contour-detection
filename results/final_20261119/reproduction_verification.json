@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "records": 9776,
+  "prediction_files": {
+    "fresh_synthetic384": 384,
+    "fresh_null384": 384,
+    "bsds_test200_low": 200,
+    "bsds_test200_darker": 200
+  },
+  "synthetic_and_null_inputs_byte_exact": true,
+  "natural_inputs_within_1e_minus7": true,
+  "input_comparison": {
+    "fresh_synthetic384": {
+      "files": 384,
+      "byte_exact_files": 384,
+      "max_absolute_difference": 0.0
+    },
+    "fresh_null384": {
+      "files": 384,
+      "byte_exact_files": 384,
+      "max_absolute_difference": 0.0
+    },
+    "bsds_test200_low": {
+      "files": 200,
+      "byte_exact_files": 0,
+      "max_absolute_difference": 2.9802322387695312e-08
+    },
+    "bsds_test200_darker": {
+      "files": 200,
+      "byte_exact_files": 0,
+      "max_absolute_difference": 1.4901161193847656e-08
+    }
+  },
+  "all_truth_arrays_byte_exact": true,
+  "all_7_internal_method_masks_exact_to_reference": true,
+  "ours_predictions_recomputed_exactly": 12,
+  "external_prediction_files_recomputed_exactly": 4,
+  "external_annotator_metrics_recomputed": true,
+  "DexiNed_executed_images": 400,
+  "sources_and_model_hashes_verified": true,
+  "algorithm_thresholds_and_evaluation_unchanged": true,
+  "reference_data_not_used_to_fill_results": true,
+  "deep_device": "cpu",
+  "frozen_protocol_original_sha256": "4beecd7f9e537012e4c4ecba65d40bef886bebbaee4bcfebc2b86399edf3064a",
+  "execution_protocol_sha256": "a163d19149cb4ba04eaf51441e79f0e644f943b4f6dfcabbb6fa6d9554594c7f",
+  "all_aggregates_recomputed": true,
+  "reference_comparison": "reference_comparison.json"
+}

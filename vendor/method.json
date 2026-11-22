@@ -1,0 +1,9 @@
+{
+  "variant": "mad32_full",
+  "strategy": "mad32",
+  "alpha": 1.0,
+  "scale": 2.8,
+  "high": 2.0,
+  "min_size": 32,
+  "id": "mad32_full_e3852c4acb"
+}

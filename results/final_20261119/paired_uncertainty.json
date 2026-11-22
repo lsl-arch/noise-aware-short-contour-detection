@@ -1,0 +1,32 @@
+{
+  "bsds_test200_low": {
+    "ours_minus_B_mean_f1": 0.002396335695594592,
+    "paired_bootstrap95": [
+      0.0007842166861637088,
+      0.004107394603576715
+    ],
+    "images_better": 114,
+    "images_worse": 86,
+    "images_equal": 0
+  },
+  "bsds_test200_darker": {
+    "ours_minus_B_mean_f1": 0.003273292586847603,
+    "paired_bootstrap95": [
+      0.0016071472287459063,
+      0.004893913567975919
+    ],
+    "images_better": 127,
+    "images_worse": 73,
+    "images_equal": 0
+  },
+  "synthetic_paired": {
+    "f1_delta95": [
+      0.0032392005723219266,
+      0.027039100576350446
+    ],
+    "short_recall_delta95": [
+      0.05802711852108195,
+      0.14240065392354126
+    ]
+  }
+}

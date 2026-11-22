@@ -1,0 +1,6 @@
+numpy==2.5.4
+scipy==1.18.1
+Pillow==12.3.0
+matplotlib==3.11.2
+opencv-contrib-python-headless==4.14.0.94
+torch==2.15.0
