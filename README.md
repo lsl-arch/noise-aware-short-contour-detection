@@ -12,9 +12,9 @@ The repository intentionally excludes BSDS500 images and annotations, the Struct
 
 For an input grayscale image, the detector computes Gaussian-derivative responses at scales $s=2.0$ and $s=2.8$. A tiled median absolute deviation (MAD) estimate supplies an empirical local noise-energy floor. The normalized score is
 
-\[
+$$
 C_s = \frac{M_s}{\sqrt{\max\{N_{s,0}^2,\,\alpha\widetilde E_s\}+10^{-12}}},\qquad \alpha=0.5.
-\]
+$$
 
 The implementation uses zero-mean derivative kernels with radius $\lceil 3s\rceil$, reflection padding, 32-by-32 MAD tiles, bilinear interpolation between tile centers, four-direction nonmaximum suppression, and an initial normalized-response threshold of 2.5. Eight-connected components are then screened. Local axial coherence averages doubled-angle orientation vectors in a 3-by-3 neighborhood; cross-scale support requires a nearby response at the other scale whose axial difference is at most 30 degrees.
 
@@ -26,9 +26,9 @@ The positive synthetic set has 384 images at 128 by 128 pixels. It crosses four 
 
 Natural-image evaluation uses all 200 BSDS500 test scenes and their original human boundary maps. For grayscale intensity $Y\in[0,1]$, the simulated low-light input is
 
-\[
-J=aY^{1.5},\qquad I=J+\sqrt{0.004^2+0.0006J}\,Z,
-\]
+$$
+J = aY^{1.5}, \qquad I = J + \sqrt{0.004^2 + 0.0006J}\,Z.
+$$
 
 where $Z$ is standard normal noise generated deterministically from the scene identifier. The conditions use $a=0.25$ (Low) and $a=0.10$ (Darker), with the same noise field for both conditions. These scenes were examined earlier in the project, so this is a fixed re-evaluation of a previously viewed benchmark, not an unseen-scene test. It is also simulated low light, not a collection of real low-light camera captures.
 
